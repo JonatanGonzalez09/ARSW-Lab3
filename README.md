@@ -14,12 +14,17 @@ To illustrate the use of the Spring framework, and the development environment f
   
   4. Make a test program, where an instance of GrammarChecker is created by Spring, and use it:
   
-  Se realizarón las pruebas correspondientes para cada GrammarChecker:
-  
-  - **Español:**
-  
-  ![](https://github.com/JonatanGonzalez09/ARSW-Lab3/blob/master/GRAMMAR-CHECKER/GRAMMAR-CHECKER/src/Imagenes/Parte1(Espa%C3%B1ol).jpg)
+  Se ejecuto el programa con el comando ```mvn exec:java -Dexec.mainClass=edu.eci.arsw.springdemo.ui.Main``` y este fue el resultado del **EnglishSpellChecker**
   
   - **Ingles:**
   
   ![](https://github.com/JonatanGonzalez09/ARSW-Lab3/blob/master/GRAMMAR-CHECKER/GRAMMAR-CHECKER/src/Imagenes/Parte1(Ingles).jpg)
+  
+## Parte II ##
+1. Modify the configuration with annotations so that the Bean 'GrammarChecker' now makes use of the SpanishSpellChecker class (so that GrammarChecker is injected with EnglishSpellChecker instead of SpanishSpellChecker.) Verify the new result.
+
+Se modifico con la _anotación_ **@Service** quitandoselo a la clase **EnglishSpellChecker** y poniendoselo a la clase **SpanishSpellChecker** ; este fue el resultado de ejecutar el comando ```mvn exec:java -Dexec.mainClass=edu.eci.arsw.springdemo.ui.Main```:
+
+  - **Español:**
+  
+  ![](https://github.com/JonatanGonzalez09/ARSW-Lab3/blob/master/GRAMMAR-CHECKER/GRAMMAR-CHECKER/src/Imagenes/Parte1(Espa%C3%B1ol).jpg)
