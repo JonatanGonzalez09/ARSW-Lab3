@@ -10,7 +10,6 @@ import edu.eci.arsw.blueprints.persistence.impl.InMemoryBlueprintPersistence;
 import edu.eci.arsw.blueprints.services.BlueprintsServices;
 
 public class Main {
-
 	static BlueprintsServices s;
 
 	public static void main(String[] args) throws BlueprintPersistenceException {
@@ -26,9 +25,11 @@ public class Main {
 		zed.add(bp0);
 		zed.add(bp1);
 		
-		System.out.println(zed);
+		//System.out.println(zed);
+		System.out.println("Todos los puntos: "+ibpp.getAllBlueprints());
 		System.out.println("Puntos Juan: ("+pts0[0].getX()+","+pts0[0].getY()+")");
 		System.out.println("Puntos Luis: ("+pts1[0].getX()+","+pts1[0].getY()+")");
+		System.out.println("Busqueda por Autor: "+ibpp.getBlueprintsByAuthor("_authorname_"));
 	}
 
 }
