@@ -43,7 +43,6 @@ public class InMemoryPersistenceTest {
         
     }
 
-
     @Test
     public void saveExistingBpTest() {
         InMemoryBlueprintPersistence ibpp=new InMemoryBlueprintPersistence();
@@ -71,7 +70,6 @@ public class InMemoryPersistenceTest {
         
     }
     
-    
     @Test
     public void getBluePrintTest() throws BlueprintPersistenceException, BlueprintNotFoundException{
                 
@@ -89,11 +87,6 @@ public class InMemoryPersistenceTest {
         assertEquals("Cargo un blueprint distinto.",bp0,bp1);
         
     }
-    
-    
-    
-
-
 
     @Test
     public void getBluePrintByAuthorTest() throws BlueprintPersistenceException, BlueprintNotFoundException{

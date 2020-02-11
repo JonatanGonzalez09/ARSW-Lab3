@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "edu.eci.arsw.blueprints.Main",
+            "projectName": "blueprints-middleware"
+        }
+    ]
+}
