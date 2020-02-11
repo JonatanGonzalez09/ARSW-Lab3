@@ -6,7 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 
-//@Service
+@Service("SpanishSpellChecker")
 public class SpanishSpellChecker implements SpellChecker {
 
 	@Override
