@@ -40,7 +40,7 @@ public class BlueprintsServices {
     }
     
     public Set<Blueprint> getAllBlueprints(){
-        return null;
+        return bpp.getAllBlueprints();
     }
     
     /**

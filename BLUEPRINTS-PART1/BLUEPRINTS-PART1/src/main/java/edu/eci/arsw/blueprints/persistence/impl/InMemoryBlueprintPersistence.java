@@ -60,4 +60,13 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
         return lista;
     }
     
+    public Set<Blueprint> getAllBlueprints() {
+        Set<Blueprint> lista = new HashSet<>();
+        blueprints.forEach((key, value) -> {
+           
+                lista.add(value);
+            
+        });
+        return lista;
+    }
 }
