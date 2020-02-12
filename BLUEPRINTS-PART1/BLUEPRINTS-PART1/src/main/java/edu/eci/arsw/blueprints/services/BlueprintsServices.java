@@ -24,12 +24,12 @@ import org.springframework.stereotype.Service;
  *
  * @author hcadavid
  */
-@Service
+@Service("BlueprintsServices")
 public class BlueprintsServices {
    
     @Autowired
     @Qualifier("InMemoryBlueprintPersistence")
-    BlueprintsPersistence bpp=null;
+    BlueprintsPersistence bpp;
     
     public void addNewBlueprint(Blueprint bp){
         try {

@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.arsw.model.filters;
+package edu.eci.arsw.model.filters.impl;
 
 import java.util.HashSet;
 import java.util.Set;
 import edu.eci.arsw.blueprints.model.*;
+import edu.eci.arsw.model.filters.filter;
 
 
 public class Subsampling implements filter{
@@ -26,7 +27,7 @@ public class Subsampling implements filter{
                 i++;
             }
         }
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        return blueprints;
     
+    }  
 }
