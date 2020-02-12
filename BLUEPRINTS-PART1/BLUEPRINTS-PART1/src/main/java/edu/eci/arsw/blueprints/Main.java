@@ -38,12 +38,12 @@ public class Main {
             for(Point p : b.getPoints()){
             System.out.println("X : " + p.getX() + "   Y : " + p.getY());
         }
-        }
+        
         }
        
         
         
-        /*
+        
         System.out.println(bps.getAllBlueprints());
         
 
@@ -66,7 +66,7 @@ public class Main {
 		System.out.println("Puntos Luis: ("+pts11[0].getX()+","+pts11[0].getY()+")");
 		System.out.println("Busqueda por Autor: "+ibpp.getBlueprintsByAuthor("_authorname_"));
                 
-        }*/
+        }
         
 }
                 
