@@ -9,8 +9,14 @@ import java.util.HashSet;
 import java.util.Set;
 import edu.eci.arsw.blueprints.model.*;
 import edu.eci.arsw.model.filters.filter;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
+/**
+ *
+ * @author david.caycedo
+ */
 @Service("Subsampling")
 public class Subsampling implements filter{
 
@@ -18,15 +24,16 @@ public class Subsampling implements filter{
 
     @Override
     public Set<Blueprint> filtrate(Set<Blueprint> blueprints) {
-        int i=0;
+       
         for (Blueprint bp : blueprints) {
-            for (Point p : bp.getPoints()){
+            List<Point> lista = new ArrayList<>();
+            for (int i=0;i<bp.getPoints().size();i++){
                 if (i%2==0){
-                    bp.getPoints().remove(p);
-                    i++;
+                    lista.add(bp.getPoints().get(i));
                 }
-                i++;
-            }
+                      
+            }    
+        bp.setPoints(lista);
         }
         return blueprints;
     

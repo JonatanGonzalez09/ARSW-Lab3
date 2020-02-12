@@ -22,20 +22,28 @@ public class Main {
         BlueprintsServices bps = ac.getBean(BlueprintsServices.class);
                 
         
-        Point[] pts=new Point[]{new Point(0, 0),new Point(10, 10)};
+        Point[] pts=new Point[]{new Point(10, 10),new Point(10, 10),new Point(3, 3)};
         Blueprint bp=new Blueprint("john", "thepaint",pts);
         Point[] pts0=new Point[]{new Point(40, 40),new Point(15, 15)};
         Blueprint bp0=new Blueprint("mack", "mypaint",pts0);
         Point[] pts1=new Point[]{new Point(1, 1),new Point(11, 11)};
         Blueprint bp1=new Blueprint("jack", "thestatue",pts1);
-        Point[] pts2=new Point[]{new Point(2, 2),new Point(12, 12)};
-        Blueprint bp2=new Blueprint("juanes", "thepaint2.0",pts2);
-        Point[] pts3=new Point[]{new Point(3, 3),new Point(13, 13)};
-        Blueprint bp3=new Blueprint("juanes", "thestatue2.0",pts2);
-        Point[] pts4=new Point[]{new Point(3, 3),new Point(13, 17),new Point(3,3),new Point(3,4)};
-        Blueprint bp4=new Blueprint("ronaldo", "escultura",pts4);
+        bps.addNewBlueprint(bp);
+        bps.addNewBlueprint(bp0);
+        bps.addNewBlueprint(bp1);
+        
+        System.out.println("Points in the filter blueprint : ");
+        for(Blueprint b : bps.getBlueprintsByAuthor("john")){
+            System.out.println(b.toString());
+            for(Point p : b.getPoints()){
+            System.out.println("X : " + p.getX() + "   Y : " + p.getY());
+        }
+        }
+        }
+       
         
         
+        /*
         System.out.println(bps.getAllBlueprints());
         
 
@@ -58,7 +66,7 @@ public class Main {
 		System.out.println("Puntos Luis: ("+pts11[0].getX()+","+pts11[0].getY()+")");
 		System.out.println("Busqueda por Autor: "+ibpp.getBlueprintsByAuthor("_authorname_"));
                 
-        }
+        }*/
         
 }
                 
