@@ -10,10 +10,12 @@ import edu.eci.arsw.blueprints.model.Point;
 import edu.eci.arsw.blueprints.persistence.BlueprintNotFoundException;
 import edu.eci.arsw.blueprints.persistence.BlueprintPersistenceException;
 import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
+import edu.eci.arsw.model.filters.filter;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Filter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +33,11 @@ public class BlueprintsServices {
     @Qualifier("InMemoryBlueprintPersistence")
     BlueprintsPersistence bpp;
     
+    @Autowired
+    @Qualifier("Redundancy")
+    filter bpf;
+    
+    
     public void addNewBlueprint(Blueprint bp){
         try {
             bpp.saveBlueprint(bp);
@@ -40,7 +47,7 @@ public class BlueprintsServices {
     }
     
     public Set<Blueprint> getAllBlueprints(){
-        return bpp.getAllBlueprints();
+        return bpf.filtrate(bpp.getAllBlueprints());
     }
     
     /**
@@ -61,7 +68,9 @@ public class BlueprintsServices {
      * @throws BlueprintNotFoundException if the given author doesn't exist
      */
     public Set<Blueprint> getBlueprintsByAuthor(String author) throws BlueprintNotFoundException{
-           return bpp.getBlueprintsByAuthor(author);
+           return bpf.filtrate(bpp.getBlueprintsByAuthor(author));
+           
+           
     }
     
 }

@@ -9,8 +9,9 @@ import java.util.HashSet;
 import java.util.Set;
 import edu.eci.arsw.blueprints.model.*;
 import edu.eci.arsw.model.filters.filter;
+import org.springframework.stereotype.Service;
 
-
+@Service("Subsampling")
 public class Subsampling implements filter{
 
     Set<Blueprint> lista = new HashSet<>();

@@ -11,12 +11,14 @@ import edu.eci.arsw.model.filters.filter;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 
 /**
  *
  * @author david.caycedo
  */
+@Service("Redundancy")
 public class Redundancy implements filter {
 
     @Override
