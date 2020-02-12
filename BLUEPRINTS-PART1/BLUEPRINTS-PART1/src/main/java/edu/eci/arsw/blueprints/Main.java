@@ -22,7 +22,7 @@ public class Main {
         BlueprintsServices bps = ac.getBean(BlueprintsServices.class);
                 
         
-        Point[] pts=new Point[]{new Point(10, 10),new Point(10, 10),new Point(3, 3)};
+        Point[] pts=new Point[]{new Point(10, 10),new Point(10, 10),new Point(10, 10)};
         Blueprint bp=new Blueprint("john", "thepaint",pts);
         Point[] pts0=new Point[]{new Point(40, 40),new Point(15, 15)};
         Blueprint bp0=new Blueprint("mack", "mypaint",pts0);
